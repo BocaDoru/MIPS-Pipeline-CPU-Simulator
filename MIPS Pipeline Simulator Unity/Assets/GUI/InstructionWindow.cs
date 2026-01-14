@@ -48,7 +48,7 @@ public class InstructionWindow : MonoBehaviour
         for (int i = 4; i >= 0; i--)
         {
             int index = (int)pcIn[i].Value / 4;
-            if (index < spawnedRows.Count)
+            if (index >= 0 && index < spawnedRows.Count)
             {
                 GameObject rowObj = spawnedRows[index];
                 InstructionRow instructionRow = rowObj.GetComponent<InstructionRow>();
